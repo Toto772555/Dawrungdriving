@@ -1,0 +1,39 @@
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+.custom-nav .navbar-brand {
+    color: rgb(255, 255, 255);
+}
+
+.custom-nav .navbar-collapse .navbar-nav a {
+    color: rgb(255, 255, 255);
+}
+
+.carousel-item img {
+    height: 65vh;
+    object-fit: cover;
+}
+
+.carousel-item {
+    position: relative;
+
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+
+    z-index: 1;
+}
+
+.carousel-caption {
+    z-index: 2;
+}
