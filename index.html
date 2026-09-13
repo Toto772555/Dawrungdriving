@@ -15,12 +15,12 @@
 
 <body>
     <header>
-        <nav><a class="brand" href="#home"><img src="images/logo.png"
+        <nav><a class="brand" href="#home"><img src="images/newlogo.png"
                     alt="โลโก้"><span>ดาวรุ่งสอนขับรถยนต์</span></a><button class="menu"
                 aria-label="เปิดเมนู">☰</button>
             <div class="links"><a class="on" href="#home">หน้าแรก</a><a href="#courses">คอร์สเรียน</a><a
-                    href="#about">เกี่ยวกับเรา</a><a href="#reviews">รีวิวจากลูกค้า</a><a href="#contact">ติดต่อเรา</a>
-            </div><a class="phone" href="tel:0918259824">☎ <span><b>091-825-9824</b><small>24 ชม.</small></span></a>
+                    href="#practice">ทดลองทำข้อสอบ</a><a href="#about">เกี่ยวกับเรา</a><a href="#reviews">รีวิวจากลูกค้า</a><a href="#contact">ติดต่อเรา</a>
+            </div><a class="phone" href="tel:0918259824">☎ <span><b>091-825-9824</b><small>09:00-17:00น. ทุกวัน</small></span></a>
         </nav>
     </header>
     <main>
@@ -35,30 +35,26 @@
                 <h2>คอร์สเรียนของเรา</h2>
             </div>
             <div class="courses">
-                <article>
-                    <div><img src="images/hero1.png" alt="คอร์สเรียนขับรถ"><label>ยอดนิยม</label></div>
-                    <h3>คอร์สเรียนขับรถยนต์</h3>
-                    <p>เรียนตั้งแต่พื้นฐานจนสอบผ่าน พร้อมขับรถบนถนนจริง</p><strong>เริ่มต้น <b></b></strong><a
-                        href="#contact">ดูรายละเอียด</a>
+                <article class="featured-course">
+                    <div><img src="images/hero1.png" alt="คอร์สเรียนจนขับได้ 15 ชั่วโมง"><label>15 ชั่วโมง</label></div>
+                    <h3>คอร์สเรียนจนขับได้</h3>
+                    <p>เรียนขับรถ <b>15 ชั่วโมง</b><br>พร้อมดำเนินการทำใบขับขี่ที่ขนส่งให้ลูกค้า</p><strong>ราคาคอร์ส <b>5,500 บาท</b></strong><a
+                        href="#contact">สอบถามรายละเอียด / สมัครเรียน</a>
                 </article>
-                <article>
-                    <div><img src="images/slider1.jpg" alt="คอร์สเสริมทักษะ"><label>แนะนำ</label></div>
-                    <h3>คอร์สเสริมทักษะการขับขี่</h3>
-                    <p>เสริมความมั่นใจ แก้ไขปัญหาเฉพาะจุดบนถนน</p><strong>เริ่มต้น <b></b></strong><a
-                        href="#contact">ดูรายละเอียด</a>
-                </article>
-                <article>
-                    <div><img src="images/about.jpg" alt="คอร์สสำหรับมือใหม่"><label>สำหรับมือใหม่</label></div>
-                    <h3>คอร์สเรียนขับรถสำหรับมือใหม่</h3>
-                    <p>ไม่เคยขับมาก่อนก็เรียนได้ สอนได้ตั้งแต่เริ่มต้น</p><strong>เริ่มต้น <b></b></strong><a
-                        href="#contact">ดูรายละเอียด</a>
-                </article>
-                <article>
-                    <div><img src="images/slider3.jpg" alt="คอร์สเร่งด่วน"><label>เร่งด่วน</label></div>
-                    <h3>คอร์สเรียนเร่งด่วน</h3>
-                    <p>เหมาะสำหรับผู้ที่มีเวลาจำกัด จบคอร์สตามต้องการ</p><strong>เริ่มต้น <b></b></strong><a
-                        href="#contact">ดูรายละเอียด</a>
-                </article>
+            </div>
+        </section>
+        <section class="section practice" id="practice" aria-labelledby="practice-title">
+            <div class="practice-card">
+                <div class="practice-content">
+                    <p class="kicker">เตรียมความพร้อมก่อนสอบ</p>
+                    <h2 id="practice-title">ทดลองทำข้อสอบใบขับขี่</h2>
+                    <p>ผู้ที่สนใจสามารถเข้าไปลองทำข้อสอบด้วยตนเอง เพื่อทบทวนความรู้และเตรียมความพร้อมก่อนสอบใบขับขี่</p>
+                </div>
+                <div class="practice-action">
+                    <a href="https://claude.ai/code/artifact/42047b39-5bdb-4a41-9b50-2918f0361409"
+                        target="_blank" rel="noopener noreferrer" aria-describedby="practice-link-note">เริ่มทำข้อสอบ <span aria-hidden="true">↗</span></a>
+                    <small id="practice-link-note">เปิดแบบทดสอบบน Claude ในแท็บใหม่</small>
+                </div>
             </div>
         </section>
         <section class="why" id="about">
@@ -88,42 +84,62 @@
                 <p>ความประทับใจจากผู้เรียน</p>
                 <h2>รีวิวจากลูกค้าที่เรียนกับเรา</h2>
             </div>
-            <div class="reviews">
-                <article><b>คุณเมย์　<span>★★★★★</span></b>
-                    <p>ครูสอนดีมากค่ะ ใจเย็น อธิบายเข้าใจง่าย ทำให้มั่นใจขึ้นเยอะ</p>
+            <!-- Selected reviews transcribed from customer-provided Google screenshots. -->
+            <p class="review-selection">คัดสรรรีวิว 5 ดาวจาก Google · รีวิวภาษาอังกฤษแปลและสรุปเป็นภาษาไทย</p>
+            <div class="reviews selected-reviews">
+                <article>
+                    <h3>Maneerat Meesup</h3>
+                    <span class="review-stars" role="img" aria-label="5 จาก 5 ดาว">★★★★★</span>
+                    <blockquote>ไม่มีพื้นฐานในการขับรถยนต์ เป็นคนขี้ตกใจ ขี้กลัว แต่พอมาเรียนกับคุณครูความรู้สึกนั้นก็หายไป คุณครูใจดี ใจเย็น ไม่ดุ หรือกดดัน เรียนสนุกมากค่ะ</blockquote>
+                    <small>รีวิวจาก Google · ข้อความต้นฉบับ</small>
                 </article>
-                <article><b>คุณบอล　<span>★★★★★</span></b>
-                    <p>ไม่เคยขับรถมาก่อนเลย แต่ครูสอนเข้าใจ ทำให้ขับเป็นเร็วขึ้น</p>
+                <article>
+                    <h3>Sandrine Savarimoutou</h3>
+                    <span class="review-stars" role="img" aria-label="5 จาก 5 ดาว">★★★★★</span>
+                    <p>ไม่เคยขับรถมาก่อนและกังวลมาก แต่ความใจเย็นของครูช่วยให้เรียนรู้ได้เร็ว คุณนุ้ย ผู้จัดการโรงเรียน ใจดี เป็นมืออาชีพ และพร้อมช่วยเหลือนักเรียนเสมอ แนะนำโรงเรียนนี้อย่างยิ่ง</p>
+                    <small>รีวิวจาก Google · แปลและสรุปจากภาษาอังกฤษ</small>
                 </article>
-                <article><b>คุณแอน　<span>★★★★★</span></b>
-                    <p>บริการดีมากค่ะ มีรับ-ส่ง สะดวกมาก แนะนำเลยค่ะ</p>
+                <article>
+                    <h3>Vladyslav Strebkov</h3>
+                    <span class="review-stars" role="img" aria-label="5 จาก 5 ดาว">★★★★★</span>
+                    <p>พอใจมากที่ได้เรียนที่นี่ ช่วยทบทวนทักษะการขับรถ ครูเป็นมิตร อธิบายเข้าใจง่าย และพูดภาษาอังกฤษได้ดี แนะนำให้มาใช้บริการโรงเรียนนี้</p>
+                    <small>รีวิวจาก Google · แปลและสรุปจากภาษาอังกฤษ</small>
                 </article>
-                <article><b>คุณต้น　<span>★★★★★</span></b>
-                    <p>เรียนสนุก ไม่เครียด ครูเป็นกันเอง ผ่านฉลุยครับ</p>
+                <article>
+                    <h3>Vladislav Rychagov</h3>
+                    <span class="review-stars" role="img" aria-label="5 จาก 5 ดาว">★★★★★</span>
+                    <p>โรงเรียนดีมาก ขั้นตอนไม่ยุ่งยาก ทุกอย่างเป็นไปด้วยดี แนะนำสำหรับผู้ที่กำลังมองหาโรงเรียนในภูเก็ตเพื่อทำใบขับขี่ประเภท A</p>
+                    <small>รีวิวจาก Google · แปลและสรุปจากภาษาอังกฤษ</small>
                 </article>
+            </div>
+            <div class="google-reviews">
+                <h3>อ่านประสบการณ์จากผู้เรียนบน Google</h3>
+                <p>ดูความคิดเห็นและคะแนนรีวิวของดาวรุ่งสอนขับรถยนต์ เพื่อประกอบการตัดสินใจก่อนสมัครเรียน</p>
+                <a href="https://www.google.com/search?q=ดาวรุ่งสอนขับรถยนต์#lrd=0x30502e186c05a099:0x49f18ec3284944e3,1,,,,"
+                    target="_blank" rel="noopener noreferrer" aria-describedby="reviews-link-note">อ่านรีวิวบน Google <span aria-hidden="true">↗</span></a>
+                <small id="reviews-link-note">เปิดรีวิวในแท็บใหม่</small>
             </div>
         </section>
         <section class="cta" id="contact">
             <div>
                 <h2>ปรึกษาฟรี! วางแผนการเรียนกับเราได้เลย</h2>
-                <p>ทีมงานพร้อมให้คำแนะนำ เลือกคอร์สที่เหมาะกับคุณ</p>
+                <p>ทีมงานพร้อมให้คำแนะนำและวางแผนการเรียนให้เหมาะกับคุณ</p>
             </div><a href="tel:0918259824">☎ 091-825-9824</a><a class="line" href="https://line.me" target="_blank"
                 rel="noreferrer">● @daorungdriving</a>
         </section>
     </main>
     <footer>
         <div>
-            <section><a class="brand" href="#home"><img src="images/logo.png"
+            <section><a class="brand" href="#home"><img src="images/newlogo.png"
                         alt="โลโก้"><span>ดาวรุ่งสอนขับรถยนต์</span></a>
                 <p>โรงเรียนสอนขับรถยนต์มาตรฐาน<br>สอนขับรถจริง ดูแลทุกขั้นตอน</p>
             </section>
             <section>
                 <h3>เมนูหลัก</h3><a href="#home">หน้าแรก</a><a href="#about">เกี่ยวกับเรา</a><a
-                    href="#reviews">รีวิวจากลูกค้า</a>
+                    href="#reviews">รีวิวจากลูกค้า</a><a href="#practice">ทดลองทำข้อสอบ</a>
             </section>
             <section>
-                <h3>คอร์สเรียน</h3><a href="#courses">คอร์สเรียนขับรถยนต์</a><a
-                    href="#courses">คอร์สเสริมทักษะการขับขี่</a><a href="#courses">คอร์สเรียนเร่งด่วน</a>
+                <h3>คอร์สเรียน</h3><a href="#courses">คอร์สเรียนจนขับได้ 15 ชั่วโมง</a>
             </section>
             <section>
                 <h3>ติดต่อเรา</h3><a href="tel:0918259824">☎ 091-825-9824</a><a href="tel:0887528814">☎ 088-752-8814
