@@ -1,0 +1,14 @@
+Use case: ads-marketing
+Asset type: Thai driving school website course image, landscape 16:10.
+Create a polished new promotional course image for ดาวรุ่งสอนขับรถยนต์ in Phuket. Royal blue, white and yellow palette matching a driving school website. Clean professional typography, strong contrast, generous margins, legible Thai text, uncluttered layout usable on mobile. Photorealistic modern training car with a friendly Thai instructor and adult Thai and foreign learners at a tropical driving practice area. Integrate photography with crisp blue graphic panels. Main focus on course hours and price, supporting text visibly smaller but readable. Keep all text inside a central safe area with 8% margins. Do not add phone numbers, logos, QR codes, fake licenses, guarantees, or unsupported claims. Do not specify what the 10 and 5 hours consist of.
+Text (verbatim, render Thai accurately):
+"ดาวรุ่งสอนขับรถยนต์"
+"คอร์สเรียนขับรถ"
+"10 + 5 ชั่วโมง"
+"5,500 บาท"
+"สอบที่โรงเรียน"
+"พร้อมทำใบขับขี่ที่ขนส่งภูเก็ต"
+"ดูแลทั้งชาวต่างชาติและคนไทย"
+Make 10 + 5 and 5,500 the largest visual anchors. The result must be a finished banner image, not a website mockup.
+
+Generated using the built-in image_gen tool.
