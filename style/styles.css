@@ -905,6 +905,64 @@ footer > small { font-size: 13px; }
     .courses .featured-course > a { font-size: 16px; }
 }
 
+body.gallery-viewer-open {
+    overflow: hidden;
+}
+
+.gallery-viewer {
+    width: min(1100px, calc(100% - 24px));
+    max-width: none;
+    max-height: calc(100dvh - 24px);
+    margin: auto;
+    padding: 16px;
+    border: 1px solid #ffffff30;
+    border-radius: 18px;
+    background: #082344;
+    color: #fff;
+    box-shadow: 0 20px 80px #0008;
+}
+
+.gallery-viewer::backdrop {
+    background: #041225df;
+}
+
+.gallery-viewer-toolbar,
+.gallery-viewer-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.gallery-viewer-image {
+    display: block;
+    width: 100%;
+    height: min(70vh, 760px);
+    height: min(70dvh, 760px);
+    object-fit: contain;
+    margin: 12px 0;
+}
+
+.gallery-viewer button {
+    min-height: 44px;
+    padding: 8px 16px;
+    border: 1px solid #ffffff50;
+    border-radius: 10px;
+    background: #ffffff15;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.gallery-viewer button:hover {
+    background: #ffffff30;
+}
+
+.gallery-viewer button:focus-visible {
+    outline: 3px solid #ffd21a;
+    outline-offset: 3px;
+}
+
 .customer-gallery {
     margin-top: 40px;
     padding: clamp(16px, 3vw, 32px);
