@@ -558,39 +558,123 @@ nav {
 }
 
 .cta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    padding: 19px 6%;
-    color: #fff;
-    background: linear-gradient(100deg, #063c8d, #087bd4)
+    padding: clamp(32px, 6vw, 76px) 5%;
+    background: radial-gradient(ellipse at top right, #d8edff 0, transparent 48%), linear-gradient(135deg, #eef7ff, #f8fbff);
 }
 
-.cta h2 {
-    font-size: 22px;
-    margin: 0
+.contact-card {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(24px, 4vw, 52px);
+    border: 1px solid #e0ebf8;
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 0 18px 55px #07387d16;
 }
 
-.cta p {
-    font-size: 13px;
-    margin: 2px 0
+.contact-copy {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    text-align: center;
 }
 
-.cta a {
-    background: var(--g);
-    color: #093b81;
-    padding: 10px 25px;
-    border-radius: 11px;
-    font-size: 21px;
+.contact-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #0877dd;
+    font-size: 14px;
     font-weight: 700;
-    white-space: nowrap
+    letter-spacing: .08em;
 }
 
-.cta .line {
-    background: #0ac657;
-    color: #fff;
-    font-size: 15px
+.contact-copy h2 {
+    margin: 0;
+    color: #07387d;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.3;
+}
+
+.contact-copy p {
+    margin: 10px 0 0;
+    color: #5d6f87;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.contact-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.contact-method {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 16px;
+    border: 1px solid #e0ebf8;
+    border-radius: 16px;
+    background: #f8fbff;
+    color: #07387d;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-3px);
+    border-color: #b8d9ff;
+    box-shadow: 0 10px 24px #07387d14;
+}
+
+.contact-method:focus-visible {
+    outline: 3px solid #0877dd;
+    outline-offset: 3px;
+}
+
+.contact-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    place-items: center;
+    border-radius: 15px;
+    background: #e5f1ff;
+    color: #0877dd;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.contact-icon svg {
+    display: block;
+    width: 34px;
+    height: 34px;
+}
+
+.contact-whatsapp .contact-icon {
+    background: #e2f8e9;
+    color: #168a3d;
+}
+
+.contact-line .contact-icon {
+    background: #e2f8e9;
+    color: #06a944;
+    font-size: 12px;
+}
+
+.contact-label,
+.contact-hint {
+    display: block;
+    color: #667991;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.contact-method strong {
+    display: block;
+    margin: 3px 0;
+    color: #07387d;
+    font-size: clamp(15px, 1.3vw, 18px);
+    overflow-wrap: anywhere;
 }
 
 footer>div {
@@ -774,20 +858,10 @@ footer>small {
         grid-template-columns: 1fr
     }
 
-    .cta {
-        flex-direction: column;
-        gap: 14px;
-        text-align: center;
-        padding: 25px 5%
-    }
-
-    .cta h2 {
-        font-size: 20px
-    }
-
-    .cta a {
-        font-size: 19px
-    }
+    .contact-card { padding: 25px 18px; border-radius: 20px; }
+    .contact-copy { margin-bottom: 22px; }
+    .contact-actions { grid-template-columns: 1fr; }
+    .contact-method { width: 100%; max-width: 480px; margin: 0 auto; }
 
     footer>div {
         grid-template-columns: 1fr 1fr;
@@ -824,10 +898,6 @@ body { font-size: 17px; }
 .stats b { font-size: 31px; }
 .stats small { font-size: 12px; }
 .reviews article { font-size: 16px; }
-.cta h2 { font-size: 25px; }
-.cta p { font-size: 15px; }
-.cta a { font-size: 23px; }
-.cta .line { font-size: 17px; }
 footer .brand { font-size: 20px; }
 footer p { font-size: 15px; }
 footer h3 { font-size: 18px; }
