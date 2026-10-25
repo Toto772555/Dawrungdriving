@@ -20,13 +20,28 @@
                 aria-label="เปิดเมนู">☰</button>
             <div class="links"><a class="on" href="#home">หน้าแรก</a><a href="#courses">คอร์สเรียน</a><a
                     href="#practice">ทดลองทำข้อสอบ</a><a href="#about">เกี่ยวกับเรา</a><a href="#reviews">รีวิวจากลูกค้า</a><a href="#contact">ติดต่อเรา</a>
-            </div><a class="phone" href="tel:0918259824">☎ <span><b>091-825-9824</b><small>09:00-17:00น. ทุกวัน</small></span></a>
+            </div><details class="language-picker">
+                    <summary class="language-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+                        <img class="language-current-flag" src="images/Flag_of_Thailand.svg" alt="">
+                        <span class="language-current-label">ไทย</span><span aria-hidden="true">▾</span>
+                    </summary>
+                    <div class="language-menu" role="group" aria-label="Select language">
+                        <button class="language-option" type="button" data-language="th" data-label="ไทย"><img src="images/Flag_of_Thailand.svg" alt="">ไทย</button>
+                        <button class="language-option" type="button" data-language="en" data-label="English"><img src="images/Flag_of_the_United_Kingdom_(3-5).svg" alt="">English</button>
+                        <button class="language-option" type="button" data-language="ru" data-label="Русский"><img src="images/Flag_of_Russia.svg" alt="">Русский</button>
+                        <button class="language-option" type="button" data-language="zh" data-label="中文"><img src="images/Flag_of_the_People's_Republic_of_China.svg" alt="">中文</button>
+                    </div></details><a class="phone" href="tel:0918259824">☎ <span><b>091-825-9824</b><small>09:00-17:00น. ทุกวัน</small></span></a>
         </nav>
     </header>
     <main>
         <section class="hero" id="home">
             <div class="heroimg">
-                <img src="images/hero.png" alt="ดาวรุ่งสอนขับรถยนต์">
+                <img class="hero-slide is-active" src="images/hero.png" alt="Dawrung Driving">
+                <img class="hero-slide" src="images/slide2.png" alt="Dawrung Driving slide 2">
+                <div class="hero-dots" aria-label="Select slide">
+                    <button class="is-active" type="button" aria-label="Slide 1" aria-pressed="true"></button>
+                    <button type="button" aria-label="Slide 2" aria-pressed="false"></button>
+                </div>
             </div>
         </section>
         <section class="section" id="courses">
@@ -206,8 +221,25 @@
             <button type="button" class="gallery-viewer-next" aria-label="ดูรูปถัดไป">ถัดไป →</button>
         </div>
     </dialog>
-    <script>document.querySelector('.menu').onclick = () => document.querySelector('.links').classList.toggle('show');</script>
+    <script>
+        document.querySelector('.menu').onclick = () => document.querySelector('.links').classList.toggle('show');
+        const heroSlides = [...document.querySelectorAll('.hero-slide')];
+        const heroDots = [...document.querySelectorAll('.hero-dots button')];
+        let currentHeroSlide = 0;
+        const showHeroSlide = (index) => {
+            currentHeroSlide = index;
+            heroSlides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === index));
+            heroDots.forEach((item, dotIndex) => {
+                const active = dotIndex === index;
+                item.classList.toggle('is-active', active);
+                item.setAttribute('aria-pressed', String(active));
+            });
+        };
+        heroDots.forEach((dot, index) => dot.addEventListener('click', () => showHeroSlide(index)));
+        window.setInterval(() => showHeroSlide((currentHeroSlide + 1) % heroSlides.length), 5000);
+    </script>
     <script src="scripts/gallery.js"></script>
+    <script src="scripts/language.js"></script>
 </body>
 
 </html>
