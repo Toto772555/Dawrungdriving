@@ -8,6 +8,10 @@
     if (isHome) {
         english.push(
             ['.links a', ['Home', 'Courses', 'Practice Test', 'About Us', 'Reviews', 'Contact']],
+            ['.local-intro .kicker', ['Driving school in Phuket']],
+            ['#local-intro-title', ['Driving lessons in Phuket with real-road training and license support']],
+            ['.local-intro p:not(.kicker)', ['Dawrung Driving School offers driving lessons in Phuket with professional instructors on real roads. Choose our 10+5 hour course, with help preparing for your test and getting your license. Thai and international students are welcome.']],
+            ['.local-intro a', ['View driving courses']],
             ['.phone small', ['Open daily, 9:00 AM–5:00 PM']],
             ['.title p', ['Courses designed for you', 'What our students say']],
             ['.title h2', ['Our Courses', 'Student Reviews']],
@@ -55,7 +59,7 @@
         english.push(
             ['.navbar-nav .nav-link:not(.language-toggle)', ['Home', 'Gallery', 'Contact']],
             ['.navbar-brand span', ['Dawrung Driving School']],
-            ['h1', [document.querySelector('h1')?.textContent.trim().toLowerCase() === 'gallery' ? 'Gallery' : 'Contact Us']],
+            ['h1', [location.pathname.toLowerCase().includes('gallery') ? 'Gallery' : 'Contact Us']],
             ['.carousel-caption h5', ['Dawrung Driving School', 'Dawrung Driving School', 'Dawrung Driving School']],
             ['.carousel-caption p', ['Learn on real roads and get your license quickly. We welcome Thai and international students.', 'Feel confident on every road. Learn by doing, pass your test, and get your license sooner.', 'Professional driving lessons on real roads, with a clear path to your license.']],
             ['.visually-hidden', ['Previous', 'Next']],
@@ -66,6 +70,10 @@
     const russian = isHome ? [
         ['.brand span', ['Автошкола Dawrung', 'Автошкола Dawrung']],
         ['.links a', ['Главная', 'Курсы', 'Пробный тест', 'О нас', 'Отзывы', 'Контакты']],
+        ['.local-intro .kicker', ['Автошкола на Пхукете']],
+        ['#local-intro-title', ['Обучение вождению на Пхукете и помощь в получении прав']],
+        ['.local-intro p:not(.kicker)', ['Автошкола Dawrung проводит занятия по вождению на Пхукете с профессиональными инструкторами на реальных дорогах. Выберите курс 10+5 часов: мы поможем подготовиться к экзамену и получить водительское удостоверение. Принимаем граждан Таиланда и иностранцев.']],
+        ['.local-intro a', ['Посмотреть курсы вождения']],
         ['.phone small', ['Ежедневно, 9:00–17:00']],
         ['.title p', ['Курсы для вас', 'Отзывы учеников']],
         ['.title h2', ['Наши курсы', 'Отзывы учеников']],
@@ -121,6 +129,10 @@
     const chinese = isHome ? [
         ['.brand span', ['Dawrung 驾校', 'Dawrung 驾校']],
         ['.links a', ['首页', '课程', '模拟考试', '关于我们', '学员评价', '联系我们']],
+        ['.local-intro .kicker', ['普吉岛驾驶学校']],
+        ['#local-intro-title', ['普吉岛驾驶培训，真实道路练习并协助办理驾照']],
+        ['.local-intro p:not(.kicker)', ['Dawrung 驾校在普吉岛提供驾驶课程，由专业教练带领学员在真实道路上练习。可选择 10+5 小时课程，并获得考试准备及办理驾照方面的协助。欢迎泰国及国际学员。']],
+        ['.local-intro a', ['查看驾驶课程']],
         ['.phone small', ['每日营业，9:00–17:00']],
         ['.title p', ['为您设计的课程', '学员评价']],
         ['.title h2', ['我们的课程', '学员评价']],
@@ -200,12 +212,19 @@
         document.documentElement.lang = language;
         const page = location.pathname.toLowerCase().includes('gallery') ? 'gallery' : 'contact';
         const titles = {
-            th: isHome ? 'ดาวรุ่งสอนขับรถยนต์' : (page === 'gallery' ? 'แกลเลอรี | ดาวรุ่งสอนขับรถยนต์' : 'ติดต่อเรา | ดาวรุ่งสอนขับรถยนต์'),
-            en: isHome ? 'Dawrung Driving School' : (page === 'gallery' ? 'Gallery | Dawrung Driving School' : 'Contact | Dawrung Driving School'),
-            ru: isHome ? 'Автошкола Dawrung' : (page === 'gallery' ? 'Галерея | Автошкола Dawrung' : 'Контакты | Автошкола Dawrung'),
-            zh: isHome ? 'Dawrung 驾校' : (page === 'gallery' ? '图片集 | Dawrung 驾校' : '联系我们 | Dawrung 驾校'),
+            th: isHome ? 'สอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์' : (page === 'gallery' ? 'ภาพบรรยากาศโรงเรียนสอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์' : 'ติดต่อโรงเรียนสอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์'),
+            en: isHome ? 'Driving Lessons in Phuket | Dawrung Driving School' : (page === 'gallery' ? 'Driving School Photos in Phuket | Dawrung Driving School' : 'Contact a Phuket Driving School | Dawrung Driving School'),
+            ru: isHome ? 'Уроки вождения на Пхукете | Автошкола Dawrung' : (page === 'gallery' ? 'Фото автошколы на Пхукете | Dawrung' : 'Контакты автошколы на Пхукете | Dawrung'),
+            zh: isHome ? '普吉岛驾驶培训 | Dawrung 驾校' : (page === 'gallery' ? '普吉岛驾校图片 | Dawrung 驾校' : '联系普吉岛驾校 | Dawrung 驾校'),
         };
         document.title = titles[language] || titles.th;
+        const descriptions = {
+            th: isHome ? 'โรงเรียนสอนขับรถภูเก็ต ดาวรุ่งสอนขับรถยนต์ เรียนขับบนถนนจริง คอร์ส 10+5 ชั่วโมง พร้อมดูแลการสอบและทำใบขับขี่สำหรับคนไทยและชาวต่างชาติ โทร 091-825-9824' : (page === 'gallery' ? 'ชมภาพบรรยากาศการเรียนขับรถและกิจกรรมของโรงเรียนดาวรุ่งสอนขับรถยนต์ ภูเก็ต พร้อมคอร์สเรียนสำหรับผู้ที่ต้องการใบขับขี่' : 'ติดต่อโรงเรียนสอนขับรถภูเก็ต ดาวรุ่งสอนขับรถยนต์ สอบถามคอร์สเรียนและการทำใบขับขี่ โทร 091-825-9824'),
+            en: isHome ? 'Looking for driving lessons in Phuket? Dawrung Driving School offers real-road training, a 10+5 hour course, and help preparing for your license test. Call 091-825-9824.' : (page === 'gallery' ? 'See driving lessons and school activities at Dawrung Driving School in Phuket.' : 'Contact Dawrung Driving School in Phuket about driving courses and getting your license. Call 091-825-9824.'),
+            ru: isHome ? 'Ищете уроки вождения на Пхукете? Автошкола Dawrung предлагает практику на дорогах, курс 10+5 часов и помощь в подготовке к экзамену.' : (page === 'gallery' ? 'Фотографии занятий по вождению и мероприятий автошколы Dawrung на Пхукете.' : 'Свяжитесь с автошколой Dawrung на Пхукете, чтобы узнать о курсах и получении прав.'),
+            zh: isHome ? '在普吉岛学习驾驶。Dawrung 驾校提供真实道路练习、10+5 小时课程，并协助准备驾照考试。电话 091-825-9824。' : (page === 'gallery' ? '查看 Dawrung 驾校在普吉岛的驾驶课程和校园活动照片。' : '联系普吉岛 Dawrung 驾校，咨询驾驶课程及驾照办理。电话 091-825-9824。'),
+        };
+        document.querySelector('meta[name="description"]')?.setAttribute('content', descriptions[language] || descriptions.th);
         document.querySelectorAll('[data-english]').forEach((element) => {
             element.innerHTML = language === 'th' ? original.get(element) : (element.dataset[language] || element.dataset.english);
         });

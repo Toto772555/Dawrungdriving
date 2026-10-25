@@ -1253,6 +1253,45 @@ body.gallery-viewer-open {
     cursor: pointer;
 }
 .hero-dots button.is-active { background: #fff; }
+
+.local-intro {
+    padding: clamp(34px, 5vw, 64px) 6%;
+    text-align: center;
+    background: #fff;
+}
+
+.local-intro-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.local-intro h1 {
+    margin: 8px 0 14px;
+    color: #07387d;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.25;
+}
+
+.local-intro p:not(.kicker) {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    color: #586a82;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.local-intro a {
+    display: inline-block;
+    padding: 11px 22px;
+    border-radius: 10px;
+    background: #0759bb;
+    color: #fff;
+    font-weight: 700;
+}
+
+.local-intro a:hover { background: #063d8a; }
+.local-intro a:focus-visible { outline: 3px solid #ffd21a; outline-offset: 3px; }
+
 .copy {
     width: min(64%, 900px);
     min-height: 100%;
