@@ -46,7 +46,11 @@
             ['.contact-hint', ['Tap to call', 'Send us a message', 'Add us to ask a question']],
             ['footer section:nth-child(1) p', ['A certified driving school<br>Real road training and support at every step']],
             ['footer section:nth-child(2) h3', ['Main Menu']],
-            ['footer section:nth-child(2) a', ['Home', 'About Us', 'Student Reviews', 'Practice Test']],
+            ['footer section:nth-child(2) a', ['Home', 'About Us', 'Student Reviews', 'Practice Test', 'FAQ', 'Gallery']],
+            ['.faq-heading .kicker', ['Driving lessons in Phuket']],
+            ['#faq-title', ['Frequently asked questions about driving lessons in Phuket']],
+            ['.faq-list summary', ['How long is the course and how much does it cost?', 'Can I learn if I have never driven before?', 'Can foreigners take driving lessons in Phuket?', 'How do I contact you to enroll?']],
+            ['.faq-list details p', ['Our 10 + 5 hour course costs ฿5,500 and includes a school-based test and help obtaining your license at the Phuket Transport Office.', 'Yes. Our patient instructors start from the basics and train you on real roads in Phuket until you feel confident.', 'Yes. We teach both Thai and international students, our instructors speak English, and we help with the license process at the Phuket Transport Office.', 'Call 091-825-9824 (9:00 AM–5:00 PM daily), or contact us on LINE @244achtd or WhatsApp +66 91 825 9824.']],
             ['footer section:nth-child(3) h3', ['Courses']],
             ['footer section:nth-child(3) a', ['Learn to drive · 15 hours']],
             ['footer section:nth-child(4) h3', ['Contact Us']],
@@ -64,6 +68,7 @@
             ['.carousel-caption p', ['Learn on real roads and get your license quickly. We welcome Thai and international students.', 'Feel confident on every road. Learn by doing, pass your test, and get your license sooner.', 'Professional driving lessons on real roads, with a clear path to your license.']],
             ['.visually-hidden', ['Previous', 'Next']],
             ['.text-body-secondary', ['© 2026 Dawrung Driving School']],
+            ['.page-intro', [location.pathname.toLowerCase().includes('gallery') ? 'Photos of driving lessons in Phuket with Dawrung Driving School. Learn on real roads with our 10+5 hour course for Thai and international students.' : 'Contact Dawrung Driving School in Phuket. Call 091-825-9824 (9:00 AM–5:00 PM daily), LINE @244achtd, or WhatsApp +66 91 825 9824.']],
         );
     }
 
@@ -108,7 +113,11 @@
         ['.contact-hint', ['Нажмите, чтобы позвонить', 'Напишите нам', 'Добавьте нас, чтобы задать вопрос']],
         ['footer section:nth-child(1) p', ['Аккредитованная автошкола<br>Практика на реальных дорогах и помощь на каждом этапе']],
         ['footer section:nth-child(2) h3', ['Главное меню']],
-        ['footer section:nth-child(2) a', ['Главная', 'О нас', 'Отзывы учеников', 'Пробный тест']],
+        ['footer section:nth-child(2) a', ['Главная', 'О нас', 'Отзывы учеников', 'Пробный тест', 'Вопросы и ответы', 'Галерея']],
+        ['.faq-heading .kicker', ['Уроки вождения на Пхукете']],
+        ['#faq-title', ['Частые вопросы об обучении вождению на Пхукете']],
+        ['.faq-list summary', ['Сколько длится курс и сколько он стоит?', 'Можно ли учиться, если я никогда не водил?', 'Могут ли иностранцы учиться вождению на Пхукете?', 'Как связаться с вами и записаться?']],
+        ['.faq-list details p', ['Курс 10 + 5 часов стоит 5 500 бат и включает экзамен в школе и помощь в получении прав в транспортном управлении Пхукета.', 'Да. Терпеливые инструкторы начнут с основ и будут заниматься с вами на реальных дорогах Пхукета, пока вы не почувствуете уверенность.', 'Да. Мы обучаем граждан Таиланда и иностранцев, инструкторы говорят по-английски и помогают с оформлением прав в транспортном управлении Пхукета.', 'Позвоните 091-825-9824 (ежедневно 9:00–17:00) или напишите в LINE @244achtd или WhatsApp +66 91 825 9824.']],
         ['footer section:nth-child(3) h3', ['Курсы']],
         ['footer section:nth-child(3) a', ['Курс вождения · 15 часов']],
         ['footer section:nth-child(4) h3', ['Контакты']],
@@ -125,6 +134,7 @@
         ['.carousel-caption p', ['Учитесь водить на реальных дорогах и быстрее получайте права. Принимаем граждан Таиланда и иностранцев.', 'Уверенность на любой дороге. Практика, экзамен и водительское удостоверение.', 'Профессиональное обучение вождению на реальных дорогах и помощь в получении прав.']],
         ['.visually-hidden', ['Назад', 'Далее']],
         ['.text-body-secondary', ['© 2026 Автошкола Dawrung']],
+        ['.page-intro', [location.pathname.toLowerCase().includes('gallery') ? 'Фотографии занятий по вождению на Пхукете в автошколе Dawrung. Практика на реальных дорогах, курс 10+5 часов для граждан Таиланда и иностранцев.' : 'Свяжитесь с автошколой Dawrung на Пхукете: 091-825-9824 (ежедневно 9:00–17:00), LINE @244achtd или WhatsApp +66 91 825 9824.']],
     ];
     const chinese = isHome ? [
         ['.brand span', ['Dawrung 驾校', 'Dawrung 驾校']],
@@ -167,7 +177,11 @@
         ['.contact-hint', ['点击拨打', '给我们发消息', '添加好友进行咨询']],
         ['footer section:nth-child(1) p', ['正规驾驶培训学校<br>真实道路练习，全程提供支持']],
         ['footer section:nth-child(2) h3', ['主菜单']],
-        ['footer section:nth-child(2) a', ['首页', '关于我们', '学员评价', '模拟考试']],
+        ['footer section:nth-child(2) a', ['首页', '关于我们', '学员评价', '模拟考试', '常见问题', '图片集']],
+        ['.faq-heading .kicker', ['普吉岛驾驶培训']],
+        ['#faq-title', ['普吉岛学车常见问题']],
+        ['.faq-list summary', ['课程多长时间？费用是多少？', '从未开过车可以学吗？', '外国人可以在普吉岛学车吗？', '如何联系报名？']],
+        ['.faq-list details p', ['10 + 5 小时课程费用为 5,500 泰铢，包含校内考试，并协助您在普吉岛陆路运输局办理驾照。', '可以。耐心的教练会从基础开始教学，并在普吉岛真实道路上练习，直到您有信心驾驶。', '可以。我们同时招收泰国及国际学员，教练会说英语，并协助您在普吉岛陆路运输局办理驾照。', '请拨打 091-825-9824（每日 9:00–17:00），或通过 LINE @244achtd、WhatsApp +66 91 825 9824 联系我们。']],
         ['footer section:nth-child(3) h3', ['课程']],
         ['footer section:nth-child(3) a', ['学会驾驶课程 · 15 小时']],
         ['footer section:nth-child(4) h3', ['联系我们']],
@@ -184,6 +198,7 @@
         ['.carousel-caption p', ['在真实道路上学习驾驶，快速取得驾照。欢迎泰国及国际学员。', '自信应对每一段旅程。认真练习、参加考试，更快取得驾照。', '专业驾驶培训，在真实道路上练习，并协助您取得驾照。']],
         ['.visually-hidden', ['上一张', '下一张']],
         ['.text-body-secondary', ['© 2026 Dawrung 驾校']],
+        ['.page-intro', [location.pathname.toLowerCase().includes('gallery') ? 'Dawrung 驾校普吉岛学车照片。真实道路练习，10+5 小时课程，欢迎泰国及国际学员。' : '联系普吉岛 Dawrung 驾校：电话 091-825-9824（每日 9:00–17:00）、LINE @244achtd 或 WhatsApp +66 91 825 9824。']],
     ];
     for (const [selector, values] of english) {
         document.querySelectorAll(selector).forEach((element, index) => {
@@ -200,11 +215,6 @@
         }
     }
 
-    if (!isHome) {
-        const heading = document.querySelector('h1');
-        if (heading) original.set(heading, location.pathname.toLowerCase().includes('gallery') ? 'รูปภาพแกลเลอรี' : 'ติดต่อเรา');
-    }
-
     const languageOptions = [...document.querySelectorAll('.language-option')];
     let language = localStorage.getItem('site-language') || 'th';
     const applyLanguage = (next) => {
@@ -212,14 +222,14 @@
         document.documentElement.lang = language;
         const page = location.pathname.toLowerCase().includes('gallery') ? 'gallery' : 'contact';
         const titles = {
-            th: isHome ? 'สอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์' : (page === 'gallery' ? 'ภาพบรรยากาศโรงเรียนสอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์' : 'ติดต่อโรงเรียนสอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์'),
+            th: isHome ? 'สอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์ โรงเรียนสอนขับรถภูเก็ต' : (page === 'gallery' ? 'ภาพบรรยากาศสอนขับรถภูเก็ต | ดาวรุ่งสอนขับรถยนต์' : 'ติดต่อดาวรุ่งสอนขับรถ | โรงเรียนสอนขับรถภูเก็ต'),
             en: isHome ? 'Driving Lessons in Phuket | Dawrung Driving School' : (page === 'gallery' ? 'Driving School Photos in Phuket | Dawrung Driving School' : 'Contact a Phuket Driving School | Dawrung Driving School'),
             ru: isHome ? 'Уроки вождения на Пхукете | Автошкола Dawrung' : (page === 'gallery' ? 'Фото автошколы на Пхукете | Dawrung' : 'Контакты автошколы на Пхукете | Dawrung'),
             zh: isHome ? '普吉岛驾驶培训 | Dawrung 驾校' : (page === 'gallery' ? '普吉岛驾校图片 | Dawrung 驾校' : '联系普吉岛驾校 | Dawrung 驾校'),
         };
         document.title = titles[language] || titles.th;
         const descriptions = {
-            th: isHome ? 'โรงเรียนสอนขับรถภูเก็ต ดาวรุ่งสอนขับรถยนต์ เรียนขับบนถนนจริง คอร์ส 10+5 ชั่วโมง พร้อมดูแลการสอบและทำใบขับขี่สำหรับคนไทยและชาวต่างชาติ โทร 091-825-9824' : (page === 'gallery' ? 'ชมภาพบรรยากาศการเรียนขับรถและกิจกรรมของโรงเรียนดาวรุ่งสอนขับรถยนต์ ภูเก็ต พร้อมคอร์สเรียนสำหรับผู้ที่ต้องการใบขับขี่' : 'ติดต่อโรงเรียนสอนขับรถภูเก็ต ดาวรุ่งสอนขับรถยนต์ สอบถามคอร์สเรียนและการทำใบขับขี่ โทร 091-825-9824'),
+            th: isHome ? 'สอนขับรถภูเก็ต กับดาวรุ่งสอนขับรถยนต์ ภูเก็ตสอนขับรถบนถนนจริง คอร์ส 10+5 ชั่วโมง 5,500 บาท สอบที่โรงเรียน พร้อมทำใบขับขี่ที่ขนส่งภูเก็ต คนไทยและชาวต่างชาติ โทร 091-825-9824' : (page === 'gallery' ? 'ชมภาพบรรยากาศสอนขับรถภูเก็ตของดาวรุ่งสอนขับรถยนต์ ภูเก็ตสอนขับรถบนถนนจริง คอร์ส 10+5 ชั่วโมง สำหรับคนไทยและชาวต่างชาติ' : 'ติดต่อดาวรุ่งสอนขับรถ โรงเรียนสอนขับรถภูเก็ต สอบถามคอร์สเรียนและการทำใบขับขี่ โทร 091-825-9824 LINE @244achtd'),
             en: isHome ? 'Looking for driving lessons in Phuket? Dawrung Driving School offers real-road training, a 10+5 hour course, and help preparing for your license test. Call 091-825-9824.' : (page === 'gallery' ? 'See driving lessons and school activities at Dawrung Driving School in Phuket.' : 'Contact Dawrung Driving School in Phuket about driving courses and getting your license. Call 091-825-9824.'),
             ru: isHome ? 'Ищете уроки вождения на Пхукете? Автошкола Dawrung предлагает практику на дорогах, курс 10+5 часов и помощь в подготовке к экзамену.' : (page === 'gallery' ? 'Фотографии занятий по вождению и мероприятий автошколы Dawrung на Пхукете.' : 'Свяжитесь с автошколой Dawrung на Пхукете, чтобы узнать о курсах и получении прав.'),
             zh: isHome ? '在普吉岛学习驾驶。Dawrung 驾校提供真实道路练习、10+5 小时课程，并协助准备驾照考试。电话 091-825-9824。' : (page === 'gallery' ? '查看 Dawrung 驾校在普吉岛的驾驶课程和校园活动照片。' : '联系普吉岛 Dawrung 驾校，咨询驾驶课程及驾照办理。电话 091-825-9824。'),

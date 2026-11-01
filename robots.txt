@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toto772555.github.io/Dawrungdriving/sitemap.xml

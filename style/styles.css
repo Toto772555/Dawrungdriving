@@ -1322,3 +1322,175 @@ body.gallery-viewer-open {
         background: linear-gradient(180deg, #eefafff5 0%, #eefaffd6 60%, #eefaff80 100%);
     }
 }
+
+/* FAQ */
+.faq-heading {
+    max-width: 860px;
+    margin: 0 auto 22px;
+    text-align: center;
+}
+
+.faq-heading h2 {
+    margin: 6px 0 0;
+    color: #07387d;
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.3;
+}
+
+.faq-list {
+    display: grid;
+    gap: 12px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.faq-list details {
+    border: 1px solid #d7e4f4;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.faq-list summary {
+    padding: 16px 20px;
+    color: #07387d;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq-list summary:focus-visible { outline: 3px solid #ffd21a; outline-offset: 2px; }
+
+.faq-list details p {
+    margin: 0;
+    padding: 0 20px 18px;
+    color: #586a82;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Sub pages (about, gallery) use a Bootstrap navbar; undo the home page nav sizing. */
+nav.custom-nav {
+    max-width: none;
+    min-height: 0;
+    padding: 8px 16px;
+}
+
+.custom-nav .navbar-brand span,
+.custom-nav.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.custom-nav.navbar-light .navbar-nav .nav-link:hover,
+.custom-nav.navbar-light .navbar-nav .nav-link:focus-visible {
+    color: #ffd21a;
+}
+
+.carousel-item img {
+    height: auto;
+}
+
+.custom-nav .navbar-toggler {
+    border-color: #ffffff80;
+    background: #fff;
+}
+
+.page-title {
+    margin: 32px auto 8px;
+    padding: 0 16px;
+    color: #07387d;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    text-align: center;
+}
+
+.page-intro {
+    max-width: 900px;
+    margin: 0 auto 28px;
+    padding: 0 16px;
+    color: #586a82;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.page-intro a {
+    color: #0759bb;
+    font-weight: 600;
+}
+
+/* Cookie consent */
+.cookie-banner {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 18px 22px;
+    border: 1px solid #d7e4f4;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 12px 36px #07387d33;
+    font-family: Kanit, sans-serif;
+}
+
+.cookie-banner[hidden] { display: none; }
+
+.cookie-banner h2 {
+    margin: 0 0 4px;
+    color: #07387d;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.cookie-banner p {
+    margin: 0;
+    color: #586a82;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.cookie-banner-actions button {
+    padding: 10px 18px;
+    border: 2px solid #0759bb;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cookie-accept { background: #0759bb; color: #fff; }
+.cookie-accept:hover { background: #063d8a; border-color: #063d8a; }
+.cookie-decline { background: #fff; color: #0759bb; }
+.cookie-decline:hover { background: #eef5fd; }
+
+.cookie-banner-actions button:focus-visible,
+.cookie-settings-link:focus-visible { outline: 3px solid #ffd21a; outline-offset: 2px; }
+
+.cookie-settings-link {
+    display: block;
+    margin: 8px auto;
+    padding: 4px 8px;
+    border: 0;
+    background: none;
+    color: #385270;
+    font: inherit;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media(max-width:720px) {
+    .cookie-banner { flex-direction: column; align-items: stretch; gap: 14px; padding: 16px; }
+    .cookie-banner-actions button { flex: 1; }
+}
