@@ -1,0 +1,16 @@
+Tool: built-in image_gen
+Use case: text-localization / ads-marketing
+Reference: images/slide2.webp
+Create a replacement landscape 4:3 driving-school banner in blue, white and yellow. White driving-school sedan on a sunny Phuket coastal road; friendly Thai instructor and adult learner in a small inset. Spacious, high-contrast, correctly spelled Thai typography.
+Exact text only:
+ดาวรุ่งสอนขับรถยนต์
+ภูเก็ต
+เรียนขับรถ
+มั่นใจบนถนนจริง
+เริ่มต้นจากพื้นฐาน ฝึกขับกับครูผู้สอน
+ฝึกขับบนถนนจริง
+ฝึกจอดและกลับรถ
+ครูดูแลใกล้ชิด
+091-825-9824
+เปิดทุกวัน 09:00–17:00 น.
+No additional text, fake QR codes, license cards, official seals, 24-hour claims, guarantees, or invented certifications. Keep text safely inset from edges. Use a pictogram rather than text on the car roof sign.

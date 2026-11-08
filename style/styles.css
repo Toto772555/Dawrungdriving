@@ -66,7 +66,9 @@ nav {
 
 .links a {
     border-bottom: 2px solid transparent;
-    padding: 6px 0
+    padding: 6px 0;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .links a:hover,
@@ -1210,7 +1212,7 @@ body.gallery-viewer-open {
 .hero {
     display: block;
     min-height: 0;
-    aspect-ratio: 1792 / 1024;
+    aspect-ratio: 1717 / 916;
     background: #0a5db5;
 }
 
@@ -1232,10 +1234,6 @@ body.gallery-viewer-open {
 
 .heroimg .hero-slide { display: none; }
 .heroimg .hero-slide.is-active { display: block; }
-.heroimg .hero-slide:nth-child(2) {
-    object-fit: contain;
-    background: #fff;
-}
 .hero-dots {
     position: absolute;
     right: 24px;
@@ -1304,17 +1302,17 @@ body.gallery-viewer-open {
 .hero-dots { z-index: 4; }
 
 @media(max-width:720px) {
-    /* Let the banner's natural proportions determine its height on mobile. */
-    .hero { aspect-ratio: auto; min-height: 0; }
+    /* Keep both slides in the same frame without cropping their text. */
+    .hero { aspect-ratio: 1717 / 916; min-height: 0; }
     .heroimg {
-        position: relative;
-        inset: auto;
-        height: auto;
+        position: absolute;
+        inset: 0;
+        height: 100%;
     }
     .heroimg img {
         display: block;
-        height: auto;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
     }
     .copy {
         width: 100%;
